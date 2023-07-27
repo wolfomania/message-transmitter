@@ -3,5 +3,6 @@ public class Main {
         MyGraphics g = new MyGraphics();
         MyLogic l = new MyLogic();
         g.setIntel(l);
+        System.out.println("asflaklj");
     }
 }
