@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] argsdfgaredgf) {
+    public static void main(String[] arg) {
         MyGraphics g = new MyGraphics();
         MyLogic l = new MyLogic();
         g.setIntel(l);
