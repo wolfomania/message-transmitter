@@ -1,3 +1,7 @@
+package graphic;
+
+import events.IntelToGraphic;
+
 import javax.swing.*;
 import java.awt.*;
 

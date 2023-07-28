@@ -1,5 +1,6 @@
+package logic;
+
 import java.io.*;
-import java.sql.SQLOutput;
 import java.util.HashMap;
 
 public class VirtualSendingDevice {

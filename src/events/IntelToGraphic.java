@@ -1,3 +1,7 @@
+package events;
+
+import logic.StationLayer;
+
 public interface IntelToGraphic {
 
     void addVirtualSendingDevice(String message, int frequency);

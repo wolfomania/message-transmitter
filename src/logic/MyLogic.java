@@ -1,10 +1,15 @@
+package logic;
+
+import events.IntelToGraphic;
+import events.IntelToReceivers;
+
 public class MyLogic implements IntelToGraphic {
 
-//    private List<VirtualSendingDevice> listOfSendingDevices;
+//    private List<logic.VirtualSendingDevice> listOfSendingDevices;
 
     private StationLayer firstLayer;
 
-//    private IntelToLayers intelToLayers;
+//    private events.IntelToLayers intelToLayers;
     public MyLogic() {
 
 //        this.listOfSendingDevices = new ArrayList<>();
@@ -86,7 +91,7 @@ public class MyLogic implements IntelToGraphic {
         return firstLayer;
     }
 //
-//    public void setIntelToLayers(IntelToLayers intelToLayers) {
+//    public void setIntelToLayers(events.IntelToLayers intelToLayers) {
 //        this.intelToLayers = intelToLayers;
 //    }
 
