@@ -94,7 +94,7 @@ public class VirtualSendingDevice {
     }
 
     public static void save() {
-        try (DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream("infoAboutSentMessages.bin"))){
+        try (DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream("message-transmitter/src/infoAboutSentMessages.bin"))){
             for(VirtualSendingDevice s : listOfSendingDevices.values()) {
                 dataOutputStream.writeInt(s.countOfSentMessages);
                 String converted = PDU.convert(s.message);
