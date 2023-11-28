@@ -1,8 +1,8 @@
+package logic;
+
+import events.IntelToReceivers;
+
 import javax.swing.*;
-import java.io.DataOutputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -101,7 +101,7 @@ public class VirtualReceivingDevice {
 //
 //    private static int calculateSumOfAllMessages() {
 //        int sum = 0;
-//        for(VirtualReceivingDevice v : virtualReceivingDeviceList.values()) {
+//        for(logic.VirtualReceivingDevice v : virtualReceivingDeviceList.values()) {
 //            sum += v.messages.size();
 //        }
 //        return sum;
@@ -113,7 +113,7 @@ public class VirtualReceivingDevice {
 //
 //    private static ArrayList<String> convertIntoList() {
 //        ArrayList<String> all = new ArrayList<>();
-//        for(VirtualReceivingDevice v : virtualReceivingDeviceList.values()) {
+//        for(logic.VirtualReceivingDevice v : virtualReceivingDeviceList.values()) {
 //            all.addAll(v.messages);
 //        }
 //        virtualReceivingDeviceList.clear();

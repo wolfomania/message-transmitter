@@ -1,14 +1,15 @@
+package graphic;
+
+import events.IntelToGraphic;
+import events.IntelToReceivers;
+
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VirtualReceivingDevicePanel extends JPanel implements IntelToReceivers{
+public class VirtualReceivingDevicePanel extends JPanel implements IntelToReceivers {
 
     private JButton jButton;
     private JLabel jLabel;
@@ -26,7 +27,7 @@ public class VirtualReceivingDevicePanel extends JPanel implements IntelToReceiv
     private Thread sizeUpdater;
 
     private final IntelToGraphic receivingDeviceIntel;
-//    private static List<VirtualReceivingDevicePanel> deviceList = new ArrayList<>();
+//    private static List<graphic.VirtualReceivingDevicePanel> deviceList = new ArrayList<>();
     private List<String> messages;
     public VirtualReceivingDevicePanel(IntelToGraphic intel) {
         active = true;
@@ -48,7 +49,7 @@ public class VirtualReceivingDevicePanel extends JPanel implements IntelToReceiv
             parent.remove(VirtualReceivingDevicePanel.this);
             isChecked = false;
             active = false;
-//            deviceList.remove(VirtualReceivingDevicePanel.this);
+//            deviceList.remove(graphic.VirtualReceivingDevicePanel.this);
             parent.revalidate();
             parent.repaint();
         });
@@ -105,7 +106,7 @@ public class VirtualReceivingDevicePanel extends JPanel implements IntelToReceiv
     }
 
 
-//    public static List<VirtualReceivingDevicePanel> getDeviceList() {
+//    public static List<graphic.VirtualReceivingDevicePanel> getDeviceList() {
 //        return deviceList;
 //    }
 

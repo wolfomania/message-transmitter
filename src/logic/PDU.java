@@ -1,3 +1,5 @@
+package logic;
+
 import java.text.SimpleDateFormat;
 import java.time.ZoneOffset;
 import java.util.Date;
@@ -6,7 +8,7 @@ import java.util.TimeZone;
 
 public class PDU {
 
-    private static HashMap<Character, Byte> alphabet = new HashMap<Character, Byte>();
+    private static HashMap<Character, Byte> characters = setAlphabet();
 
     private String encodedSMS;
 
@@ -32,7 +34,6 @@ public class PDU {
 
 
     public PDU(String message, int sender, int destination) {
-        setAlphabet();
         this.destination = transform(destination);
         firstOctet = transform(4);
         senderId = transform(sender);
@@ -75,7 +76,7 @@ public class PDU {
         StringBuilder converted = new StringBuilder();
         for(int i = 0; i < message.length(); i++) {
             char temp = message.charAt(i);
-            converted.append(transform(alphabet.get(temp)));
+            converted.append(transform(characters.get(temp)));
         }
         return converted.toString();
     }
@@ -84,7 +85,8 @@ public class PDU {
             return "0" + Integer.toHexString(num);
         } else return Integer.toHexString(num);
     }
-    public static void setAlphabet() {
+    public static HashMap<Character, Byte> setAlphabet() {
+        HashMap<Character, Byte> alphabet = new HashMap<>();
         alphabet.put('@', (byte) 0);
         alphabet.put('£', (byte) 1);
         alphabet.put('$', (byte) 2);
@@ -209,6 +211,7 @@ public class PDU {
         alphabet.put('ñ', (byte) 125);
         alphabet.put('ü', (byte) 126);
         alphabet.put('à', (byte) 127);
+        return alphabet;
     }
 
 }

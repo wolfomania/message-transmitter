@@ -1,7 +1,10 @@
+package graphic;
+
+import events.IntelToGraphic;
+
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;
 import java.awt.*;
-import java.util.HashMap;
 
 public class VirtualSendingDevicePanel extends JPanel {
 

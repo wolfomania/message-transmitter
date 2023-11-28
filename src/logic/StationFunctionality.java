@@ -1,3 +1,5 @@
+package logic;
+
 import java.util.Arrays;
 
 public abstract class StationFunctionality {
@@ -17,7 +19,7 @@ public abstract class StationFunctionality {
 
     }
 //
-//    public void sendMessageTo(StationLayer layer, String message) {
+//    public void sendMessageTo(logic.StationLayer layer, String message) {
 //        int[] tempAddress = layer.getAddressToStationFreeSpace();
 //        layer.addMessageTo(tempAddress[0], tempAddress[1], message);
 //    }

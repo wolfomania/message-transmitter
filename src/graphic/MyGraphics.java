@@ -1,3 +1,7 @@
+package graphic;
+
+import events.IntelToGraphic;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
@@ -11,7 +15,7 @@ public class MyGraphics extends JFrame {
     RightPanel rightPanel;
     public MyGraphics() {
         setTitle("Message Transmitter");
-        setSize(1280, 720);
+        setSize(800, 600);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLayout(new BorderLayout(5, 5));
         addWindowListener(new WindowAdapter() {

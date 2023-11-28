@@ -1,8 +1,7 @@
-.idea#
 .idea/*
- Compiled class file
+.idea
+# Compiled class file
 *.class
-
 # Log file
 *.log
 

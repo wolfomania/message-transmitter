@@ -1,3 +1,6 @@
+import graphic.MyGraphics;
+import logic.MyLogic;
+
 public class Main {
     public static void main(String[] args) {
         MyGraphics g = new MyGraphics();

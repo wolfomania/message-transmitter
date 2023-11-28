@@ -1,7 +1,9 @@
+package graphic;
+
+import events.IntelToGraphic;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class RightPanel extends JPanel {
     private JScrollPane scrollPane;
@@ -19,14 +21,14 @@ public class RightPanel extends JPanel {
         jButton = new JButton("Add");
         jButton.addActionListener(e -> {
             if(rightPanelIntel != null) {
-//                VirtualReceivingDevicePanel.getDeviceList().add(new VirtualReceivingDevicePanel(rightPanelIntel));
-//                devices.add(VirtualReceivingDevicePanel.getDeviceList().get(VirtualReceivingDevicePanel.getDeviceList().size() - 1));
+//                graphic.VirtualReceivingDevicePanel.getDeviceList().add(new graphic.VirtualReceivingDevicePanel(rightPanelIntel));
+//                devices.add(graphic.VirtualReceivingDevicePanel.getDeviceList().get(graphic.VirtualReceivingDevicePanel.getDeviceList().size() - 1));
                 VirtualReceivingDevicePanel receivingDevicePanel = new VirtualReceivingDevicePanel(rightPanelIntel);
                 devices.add(receivingDevicePanel);
                 rightPanelIntel.addReceivingDevice(receivingDevicePanel);
                 revalidate();
                 repaint();
-            } else MyGraphics.showError("Logic is not connected. Please Connect MyLogic to MyGraphic", "Error Message", 2000);
+            } else MyGraphics.showError("Logic is not connected. Please Connect logic.MyLogic to MyGraphic", "Error Message", 2000);
         });
         add(scrollPane, BorderLayout.CENTER);
         add(jButton, BorderLayout.SOUTH);
